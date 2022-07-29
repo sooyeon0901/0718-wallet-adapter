@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { WalletAdapterNetwork, WalletNotConnectedError } from '@solana/wallet-adapter-base';
@@ -18,7 +19,7 @@ import {
 
 } from '@solana/wallet-adapter-wallets';
 //import { CherryWalletAdapter } from 'cherry-adapter-test/src/component/cherryAdapter';
-import CherryWalletAdapter from 'cherry-adapter-simple/src/context/CherryWalletAdapter';
+import {CherryWalletAdapter} from 'cherry-adapter-simple/dist/context/CherryWalletAdapter';
 //import fs from "fs";
 
 import { clusterApiUrl,Keypair, Transaction, SystemProgram, LAMPORTS_PER_SOL, PublicKey } from '@solana/web3.js';
@@ -61,7 +62,7 @@ const Context: FC<{ children: ReactNode }> = ({ children }) => {
             new SolletWalletAdapter(),
             new SolflareWalletAdapter({ network }),
             new TorusWalletAdapter(),
-            //new CherryWalletAdapter()
+            new CherryWalletAdapter() //0729 콘솔에 체리에서 받아오는 데이터는 찍히지만 지갑 어댑터에서 WalletAccountError 에러가 남 
         ],
         [network]
     );
@@ -78,6 +79,7 @@ const Context: FC<{ children: ReactNode }> = ({ children }) => {
 const Content: FC = () => {
     let [lamports, setLamports] = useState(0);
     let [wallet, setWallet] = useState("121212");
+    //const url = 'http://localhost:8080/public/test/nftAdmin/cherryAdapterTest?userSn=1000000000000001842';
     // const { connection } = useConnection();
     const connection = new Connection(clusterApiUrl("devnet"), "confirmed");
     const { publicKey, sendTransaction } = useWallet();
@@ -139,6 +141,8 @@ const Content: FC = () => {
           <input placeholder='lamports' type="number" onChange={(e) => setTheLamports(e)}></input>
             <br></br>
           <button className='btn' onClick={onClick}>Send Sol </button>
+          {/* <button onClick={() => api(url)} >지갑주소가져오기</button> */}
+          {/* <button onClick={() => location.href = "/path"}>서버에서 지갑주소가져오기</button> */}
         </div>
     );
 };
