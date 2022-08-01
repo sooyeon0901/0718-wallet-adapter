@@ -21,7 +21,7 @@
     "@types/node": "^16.11.45",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
-    "cherry-adapter-simple": "^0.1.68",
+    "cherry-adapter-simple": "^0.1.72",
     "cherry-adapter-test": "^0.1.0",
     "crypto-browserify": "^3.12.0",
     "crypto-es": "^1.2.7",

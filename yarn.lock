@@ -4812,10 +4812,10 @@
   "resolved" "https://registry.npmjs.org/check-types/-/check-types-11.1.2.tgz"
   "version" "11.1.2"
 
-"cherry-adapter-simple@^0.1.68":
-  "integrity" "sha512-BeIg5645LXGnv3XEMFBD6qdGx51OWTY/B7eGYdfN8x1CvHG9E3cMCj4g1/5Levvre42Pu2RbA4VtLqwOM1r8GA=="
-  "resolved" "https://registry.npmjs.org/cherry-adapter-simple/-/cherry-adapter-simple-0.1.68.tgz"
-  "version" "0.1.68"
+"cherry-adapter-simple@^0.1.72":
+  "integrity" "sha512-75iNZCwKGHshfzzqbELWUtIa5RTfpxy+R43JDtyWrbcHjx+8IPOGtc8PwQWHWbkEmD8BUc4UdA7biyd+6vtZAA=="
+  "resolved" "https://registry.npmjs.org/cherry-adapter-simple/-/cherry-adapter-simple-0.1.72.tgz"
+  "version" "0.1.72"
   dependencies:
     "@solana/wallet-adapter-base" "^0.9.9"
     "@solana/web3.js" "^1.48.0"
